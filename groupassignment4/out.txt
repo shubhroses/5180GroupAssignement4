@@ -1,0 +1,17 @@
+For file test1.txt
+Page id: 0, Page rank: 0.3189930627100601
+Page id: 2, Page rank: 0.25168227004543053
+Page id: 3, Page rank: 0.17661913687398634
+Page id: 1, Page rank: 0.13232416260267282
+Page id: 4, Page rank: 0.12038136776785037
+For file test2.txt
+Page id: 8, Page rank: 0.13510772812567035
+Page id: 9, Page rank: 0.13077058492667124
+Page id: 5, Page rank: 0.12566806351608406
+Page id: 3, Page rank: 0.11966509715068738
+Page id: 0, Page rank: 0.10914533958033484
+Page id: 1, Page rank: 0.10779308229480822
+Page id: 2, Page rank: 0.09324553024728886
+Page id: 7, Page rank: 0.0813735153914097
+Page id: 4, Page rank: 0.07327832782904506
+Page id: 6, Page rank: 0.023952730937999798

@@ -66,4 +66,7 @@ class pagerank:
 
 if __name__ == "__main__":
 	pr = pagerank()
+	print(f"For file test1.txt")
+	pr.pagerank('groupassignment4/pagerank/test1.txt')
+	print(f"For file test2.txt")
 	pr.pagerank('groupassignment4/pagerank/test2.txt')
