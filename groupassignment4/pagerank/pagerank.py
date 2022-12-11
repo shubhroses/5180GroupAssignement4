@@ -13,9 +13,15 @@ class pagerank:
 	#input_file - input file that follows the format provided in the assignment description
 		transitionMatrix = self.getTransitionMatrixWithTeleporting(input_file, alpha)
 		initialVector = self.getInitialVector(len(transitionMatrix))
-		for _ in range(100):
+
+		changeSum = 1
+		# while changeSum > 0.001:
+		for _ in range(14):
+			oldVector = initialVector
+			print(oldVector)
 			initialVector = self.powerIteration(initialVector, transitionMatrix)
-		
+			changeSum = np.sum(abs(oldVector - initialVector))
+
 		pageRank = initialVector.tolist()[0]
 		pageRankToId = [(value, i) for i, value in enumerate(pageRank)]
 		pageRankToId = sorted(pageRankToId, reverse = True)
@@ -42,6 +48,7 @@ class pagerank:
 
 	def getTransitionMatrixWithTeleporting(self, input_file, alpha):
 		test = self.getAdjacencyMatrix(input_file)
+
 		n = len(test)
 		for r in range(len(test)):
 			numOfOnes = sum(test[r])
@@ -55,6 +62,7 @@ class pagerank:
 		test = np.matrix(test)
 		test = test*(1-alpha)
 		test = test + (alpha / n)
+
 		return test
 	
 	def getInitialVector(self, n):
@@ -66,7 +74,9 @@ class pagerank:
 
 if __name__ == "__main__":
 	pr = pagerank()
-	print(f"For file test1.txt")
-	pr.pagerank('groupassignment4/pagerank/test1.txt')
-	print(f"For file test2.txt")
-	pr.pagerank('groupassignment4/pagerank/test2.txt')
+	# print(f"For file test1.txt")
+	# pr.pagerank('groupassignment4/pagerank/test1.txt')
+	# print(f"For file test2.txt")
+	# pr.pagerank('groupassignment4/pagerank/test2.txt')
+	print(f"For file test3.txt")
+	pr.pagerank('groupassignment4/pagerank/test3.txt', alpha=0.14)
